@@ -3,18 +3,18 @@ The aim of this kata is to split a given string into different strings of equal 
 
 Example:
 
-Split the below string into other strings of size #3
+    Split the below string into other strings of size #3
 
-'supercalifragilisticexpialidocious'
+    'supercalifragilisticexpialidocious'
 
-Will return a new string
-'sup erc ali fra gil ist ice xpi ali doc iou s'
+    Will return a new string
+    'sup erc ali fra gil ist ice xpi ali doc iou s'
 
 Assumptions:
 
-String length is always greater than 0
-String has no spaces
-Size is always positive
+    String length is always greater than 0
+    String has no spaces
+    Size is always positive
 */
 
 var splitInParts = (s, partLength) => s.match(new RegExp('.{1,' + partLength + '}', 'g')).join(" ");
