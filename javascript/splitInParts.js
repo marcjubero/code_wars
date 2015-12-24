@@ -17,6 +17,4 @@ String has no spaces
 Size is always positive
 */
 
-var splitInParts = function(s, partLength){
-  return s.match(new RegExp('.{1,' + partLength + '}', 'g')).join(" ");
-}
+var splitInParts = (s, partLength) => s.match(new RegExp('.{1,' + partLength + '}', 'g')).join(" ");
