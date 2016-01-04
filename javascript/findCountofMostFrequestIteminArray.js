@@ -14,14 +14,13 @@ Assumptions:
 function mostFrequentItemCount(collection) {
     if(collection.length === 0) return 0;
 
-    var occurrences = [], prev;
+    var occurrences = [];
 
     collection.sort();
+    occurrences.push(1);
     for(var i = 0; i < collection.length; i++) {
-        if(collection[i] !== prev) occurrences.push(1);
+        if(collection[i] !== collection[i-1]) occurrences.push(1);
         else occurrences[occurrences.length-1]++;
-
-        prev = collection[i];
     }
 
     return Math.max.apply(null,occurrences);
